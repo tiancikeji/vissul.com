@@ -332,12 +332,12 @@
                     </div><!--/quickcontact-->
                 </div><!--/row-->
 
-                                <div class="row">
+                 <div class="row">
                     <div class="span6">
                         <div id="portifolio" class="breadcrumb">
-                            <legend><h2>Articles</h2></legend>
+                            <legend><h2>Repositories</h2></legend>
                             <div class="row">
-                                <div class="span6">
+                                <div id="repos" class="span6">
                                 </div><!--/span6-->
                             </div><!--/row-->
 
@@ -369,5 +369,16 @@
     <script src="js/bootstrap-typeahead.js"></script>
     <script src="js/application.js"></script>
     <script type="text/javascript" src="js/jquery.lightbox-0.5.js"></script>
+    <script>
+      $(document).ready(function() {
+        $.getJSON('https://api.github.com/users/vissul/repos?callback=?', function(json) {
+          // console.log(json.data);
+          for(var i=0;i<json.data.length;i++){
+            // console.log(json.data[i]);
+            $("#repos").append("<p><a href='"+json.data[i].html_url+"' target='blank'>"+json.data[i].name+"</a></p>");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
