@@ -1,5 +1,11 @@
-@import url(http://fonts.googleapis.com/css?family=Alike);
-
+/* @import url(http://fonts.googleapis.com/css?family=Alike); */
+@font-face {
+  font-family: 'Alike';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Alike'), local('Alike-Regular'), url(NDz5w5l-Wk6pE9qrZpbET6CWcynf_cDxXwCLxiixG1c.woff) format('woff');
+  }
+}
 /*!
  * Bootstrap v2.0.4
  *
